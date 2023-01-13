@@ -31,8 +31,9 @@ jobs:
           git config --local user.email "tianxiang_tnxg@outlook.com"
           git config --local user.name "TNXG"
           python index.py
+          cd ../
           git add .
-          git commit -m "Feat: New Data"
+          git commit -m "Feat: New Data at $(date +'%Y-%m-%d %H:%M:%S')"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
