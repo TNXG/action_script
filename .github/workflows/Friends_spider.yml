@@ -1,0 +1,43 @@
+name: update-friends
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 0,6,16,22 * * *"
+  workflow_dispatch:
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  Crawler:
+    name: Set System
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@main
+        with:
+          python-version: 3.9
+
+      - name: update-friends
+        run: |
+          cd friends_spider
+          pip install -r requirements.txt
+          git config --local user.email "tianxiang_tnxg@outlook.com"
+          git config --local user.name "TNXG"
+          git add .
+          git commit -m "Feat: New Data"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          branch: main
+      
+      - name: keep alive
+        uses: gautamkrishnar/keepalive-workflow@master
