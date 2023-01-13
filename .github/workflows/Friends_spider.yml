@@ -30,6 +30,7 @@ jobs:
           pip install -r requirements.txt
           git config --local user.email "tianxiang_tnxg@outlook.com"
           git config --local user.name "TNXG"
+          python index.py
           git add .
           git commit -m "Feat: New Data"
 
