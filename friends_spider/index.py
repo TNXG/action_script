@@ -62,9 +62,9 @@ if not os.path.exists(path + '/data/friends/'):
 # 检测friends_data.json是否存在
 if os.path.exists(path + '/data/friends/data.json'):
     # 如果存在则重命名为friends_data-年-月-日-小时.json
-    os.rename(path + '/data/friends/friends_data.json', path + '/data/friends/friends_data-' +
+    os.rename(path + '/data/friends/data.json', path + '/data/friends/data-' +
               time.strftime("%Y-%m-%d-%H", time.localtime()) + '.json')
 # 文件替换更新
-with open(path + '/data/friends/friends_data.json', 'w', encoding='utf-8') as f:
+with open(path + '/data/friends/data.json', 'w', encoding='utf-8') as f:
     f.write(savedata)
     print('保存成功')
