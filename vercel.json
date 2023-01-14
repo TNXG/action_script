@@ -3,7 +3,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "https://raw.githubusercontent.com/TNXG/action_script/master"
+            "dest": "https://raw.githubusercontent.com/TNXG/action_script/master/$1"
         }
     ]
 }

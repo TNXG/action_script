@@ -28,7 +28,6 @@ for i in data:
             'https://api.rss2json.com/v1/api.json?rss_url=' + url, timeout=30)
     except:
         print('Error: ' + url)
-        break
 
     try:
         # 设置编码为utf-8
@@ -50,7 +49,6 @@ for i in data:
         t += 1
     except:
         print('Error: ' + url)
-        pass
 
 alldata = bubbleSort(alldata)
 savedata = json.dumps(alldata, ensure_ascii=False)
