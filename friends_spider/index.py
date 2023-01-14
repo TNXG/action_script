@@ -25,7 +25,7 @@ for i in data:
     url = i['rss']
     try:
         jsondata = requests.get(
-            'https://api.rss2json.com/v1/api.json?rss_url=' + url, timeout=5)
+            'https://api.rss2json.com/v1/api.json?rss_url=' + url, timeout=30)
     except:
         print('Error: ' + url)
         break

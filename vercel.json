@@ -1,0 +1,9 @@
+{
+    "vercion": 2,
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "https://raw.githubusercontent.com/TNXG/action_script/master"
+        }
+    ]
+}
