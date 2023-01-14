@@ -30,10 +30,10 @@ for i in data:
         print('Error: ' + url)
         break
 
-    # 设置编码为utf-8
-    jsondata.encoding = 'utf-8'
-    jsondata = jsondata.json()
     try:
+        # 设置编码为utf-8
+        jsondata.encoding = 'utf-8'
+        jsondata = jsondata.json()
         for n in jsondata['items']:
             title = n['title']
             pubDate = n['pubDate']
