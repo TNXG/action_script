@@ -14,7 +14,7 @@ def bubbleSort(alldata):
     return alldata
 
 
-blog_friendlink = 'https://blog.tnxg.top/assets/data/links.json'
+blog_friendlink = 'https://tnxg-blog-tnxg.vercel.app/assets/data/links.json'
 
 data = requests.get(blog_friendlink).json()
 t = 0
