@@ -25,7 +25,7 @@ jobs:
         run: |
           cd friends_spider
           pip install -r requirements.txt
-          git config --local user.email "tianxiang_tnxg@outlook.com"
+          git config --local user.email "tnxg@outlook.jp"
           git config --local user.name "TNXG"
           python index.py
           cd ../
